@@ -1,0 +1,5 @@
+/.vscode
+.env
+.env.local
+*.properties.local
+*.yml.local
