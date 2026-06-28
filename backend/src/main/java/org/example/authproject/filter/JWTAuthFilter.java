@@ -2,7 +2,7 @@ package org.example.authproject.filter;
 
 import java.io.IOException;
 
-import org.example.authproject.service.CustomUserDetailsService;
+import org.example.authproject.auth.CustomUserDetailsService;
 import org.example.authproject.util.JWTUtil;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;

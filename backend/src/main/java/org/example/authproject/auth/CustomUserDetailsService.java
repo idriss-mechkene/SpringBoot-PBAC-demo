@@ -1,6 +1,6 @@
-package org.example.authproject.service;
+package org.example.authproject.auth;
 
-import org.example.authproject.entity.CustomUserDetails;
+
 import org.example.authproject.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

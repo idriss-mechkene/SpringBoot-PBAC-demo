@@ -1,8 +1,9 @@
-package org.example.authproject.entity;
+package org.example.authproject.auth;
 
 import java.util.Collection;
 import java.util.List;
 
+import org.example.authproject.entity.User;
 import org.jspecify.annotations.Nullable;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
