@@ -1,6 +1,8 @@
 package org.example.authproject.config;
 
+
 import org.example.authproject.auth.CustomUserDetailsService;
+import org.example.authproject.enums.ERole;
 import org.example.authproject.filter.JWTAuthFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -33,8 +35,10 @@ public class SecurityConfig {
         http    
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> 
-                    auth.requestMatchers("/api/test/public").permitAll()
-                        .requestMatchers("/api/auth/**").permitAll()
+                    auth.requestMatchers("/api/auth/**").permitAll()
+                    .requestMatchers("/api/test/public").permitAll()
+                    .requestMatchers("/api/test/admin").hasRole(ERole.ADMIN.name())
+                        
                         .anyRequest().authenticated());
         http.addFilterBefore(JWTAuthFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
