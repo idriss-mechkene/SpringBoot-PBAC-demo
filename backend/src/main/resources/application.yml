@@ -9,10 +9,6 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-security:
-  user:
-    name: testadmin
-    password: testadmin
 server:
   port: 8080
 logging:
